@@ -38,11 +38,11 @@ export default {
       selectedCity: "",
       cities: [
         { label: "Selecione uma cidade", value: "" },
-        { label: "Roca Sales - RS", value: "opcao1" },
-        { label: "Encantado - RS", value: "opcao2" },
-        { label: "Arvorezinha - RS", value: "opcao3" },
-        { label: "Guaporé - RS", value: "opcao4" },
-        { label: "Lajeado - RS", value: "opcao5" },
+        { label: "Roca Sales - RS", value: "option1" },
+        { label: "Encantado - RS", value: "option2" },
+        { label: "Arvorezinha - RS", value: "option3" },
+        { label: "Guaporé - RS", value: "option4" },
+        { label: "Lajeado - RS", value: "option5" },
       ],
       purpleButton: "Buscar agora",
     };
