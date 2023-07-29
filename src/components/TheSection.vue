@@ -9,7 +9,7 @@
     </div>
     <div class="grid-container">
       <div class="card-block" v-for="bloco in blocos" :key="bloco.id">
-        <img :src="`./assets/${bloco.image}`" alt="Blocos Image" />
+        <img :src="imgMap[bloco.id]" alt="Blocos Image" />
         <h3>{{ bloco.name }}</h3>
         <p>{{ bloco.description }}</p>
         <p>{{ bloco.location }}</p>
@@ -28,7 +28,15 @@ export default {
       title: "Blocos recomendados",
       firstButton: "Lista",
       secondButton: "Mapa",
+      imgMap: {},
     };
+  },
+  mounted() {
+    this.blocos.forEach((bloco) => {
+    import(`../assets/${bloco.image}.png`).then((image) => {
+        this.imgMap[bloco.id] = image.default;
+      });
+    });
   },
 };
 </script>

@@ -4,8 +4,7 @@ const blocos = [
     name: "O Python do vovô não sobe mais",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-    image:
-      "/asolute/path/to/carnaval-project/src/assets/src/assets/unsplashb2jkmc95a-8@2x.png",
+    image: "bloco1",
     location: "Roca Sales - RS",
   },
   {
@@ -13,7 +12,7 @@ const blocos = [
     name: "Todo mundo null",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-    image: "../assets/img/bloco2.png",
+    image: "bloco2",
     location: "Roca Sales - RS",
   },
   {
@@ -21,7 +20,7 @@ const blocos = [
     name: "Hoje dou exception",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-    image: "../assets/img/bloco3.png",
+    image: "bloco3",
     location: "Roca Sales - RS",
   },
   {
@@ -29,7 +28,7 @@ const blocos = [
     name: "Manda Node",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-    image: "../assets/img/bloco4.png",
+    image: "bloco4",
     location: "Roca Sales - RS",
   },
   {
@@ -37,7 +36,7 @@ const blocos = [
     name: "Só no back-end",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-    image: "../assets/img/bloco5.png",
+    image: "bloco5",
     location: "Roca Sales - RS",
   },
   {
@@ -45,7 +44,7 @@ const blocos = [
     name: "Esse anel não é de Ruby",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-    image: "../assets/img/bloco6.png",
+    image: "bloco6",
     location: "Roca Sales - RS",
   },
   {
@@ -53,7 +52,7 @@ const blocos = [
     name: "Pimenta no C# dos outros é refresco",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-    image: "../assets/img/bloco7.png",
+    image: "bloco7",
     location: "Roca Sales - RS",
   },
   {
@@ -61,7 +60,7 @@ const blocos = [
     name: "EnCACHE aqui",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-    image: "../assets/img/bloco8.png",
+    image: "bloco8",
     location: "Roca Sales - RS",
   },
   {
@@ -69,7 +68,7 @@ const blocos = [
     name: "Não valho nada mas JAVA li",
     description:
       "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-    image: "../assets/img/bloco9.png",
+    image: "bloco9",
     location: "Roca Sales - RS",
   },
 ];
