@@ -1,7 +1,12 @@
 <template>
   <div class="grid-container">
     <div class="card-block" v-for="bloco in blocos" :key="bloco.id">
-      <img v-if="imgMap[bloco.id]" :src="imgMap[bloco.id]" alt="Blocos Image" />
+      <img
+        v-if="imgMap[bloco.id]"
+        :src="imgMap[bloco.id]"
+        @click="searchBlockOnGoogle(bloco)"
+        alt="Blocos Image"
+      />
       <div class="loading" v-else>{{ loader }}</div>
       <h3>{{ bloco.name }}</h3>
       <p>{{ bloco.description }}</p>
@@ -29,6 +34,15 @@ export default {
       });
     });
     console.log(this.imgMap);
+  },
+  methods: {
+    searchBlockOnGoogle(bloco) {
+      if (bloco.name) {
+        const searchQuery = bloco.name + " bloco de carnaval 2024";
+        const googleUrl = `https://www.google.com/search?q=${searchQuery}`;
+        open(googleUrl) 
+      }
+    },
   },
 };
 </script>

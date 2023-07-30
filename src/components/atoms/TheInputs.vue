@@ -40,6 +40,7 @@ export default {
       purpleButton: "Buscar agora",
     };
   },
+
   methods: {
     searchCityOnGoogle() {
       if (this.selectedCity === "") {
