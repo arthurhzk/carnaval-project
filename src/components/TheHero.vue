@@ -21,7 +21,7 @@
               {{ city.label }}
             </option>
           </select>
-          <button class="purple-button">{{ purpleButton }}</button>
+          <TheButton big>{{ purpleButton }}</TheButton>
         </div>
       </div>
     </div>
@@ -29,24 +29,27 @@
 </template>
 
 <script>
+import TheButton from './atoms/TheButton.vue';
+
 export default {
-  name: "TheHero",
-  data() {
-    return {
-      title: "Encontre os melhores blocos <br> de carnaval de 2023",
-      subTitle: "Find your block",
-      selectedCity: "",
-      cities: [
-        { label: "Selecione uma cidade", value: "" },
-        { label: "Roca Sales - RS", value: "option1" },
-        { label: "Encantado - RS", value: "option2" },
-        { label: "Arvorezinha - RS", value: "option3" },
-        { label: "Guaporé - RS", value: "option4" },
-        { label: "Lajeado - RS", value: "option5" },
-      ],
-      purpleButton: "Buscar agora",
-    };
-  },
+    name: "TheHero",
+    data() {
+        return {
+            title: `Encontre os <span class="roxo">melhores blocos</span> <br> de carnaval de 2023`,
+            subTitle: "Find your block",
+            selectedCity: "",
+            cities: [
+                { label: "Selecione uma cidade", value: "" },
+                { label: "Roca Sales - RS", value: "option1" },
+                { label: "Encantado - RS", value: "option2" },
+                { label: "Arvorezinha - RS", value: "option3" },
+                { label: "Guaporé - RS", value: "option4" },
+                { label: "Lajeado - RS", value: "option5" },
+            ],
+            purpleButton: "Buscar agora",
+        };
+    },
+    components: { TheButton }
 };
 </script>
 <style scoped lang="scss">
@@ -129,19 +132,5 @@ header::after {
   line-height: 100%;
   border: none;
   padding: 1.2rem;
-}
-.purple-button {
-  background-color: $purple;
-  color: $white;
-  padding: 1.2rem 3.2rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
-}
-.purple-button:hover {
-  opacity: 0.9;
 }
 </style>
