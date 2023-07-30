@@ -44,15 +44,4 @@ section {
   display: flex;
   gap: 0.8rem;
 }
-
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15.3rem;
-  background-color: $gray1;
-  border-radius: 0.8rem;
-  color: $white;
-  font-weight: bold;
-}
 </style>

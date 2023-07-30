@@ -49,7 +49,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -67,6 +67,7 @@ export default {
   border: 0.1rem solid #eaeaea;
   background: #fff;
 }
+
 img {
   width: 35rem;
   height: 15.3rem;
@@ -77,5 +78,15 @@ img {
     filter: brightness(0.8);
     transform: translateY(-5px);
   }
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15.3rem;
+  background-color: $gray1;
+  border-radius: 0.8rem;
+  color: $white;
+  font-weight: bold;
 }
 </style>

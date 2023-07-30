@@ -10,7 +10,7 @@ export default {
   name: "TheTitles",
   data() {
     return {
-      title: `Encontre os <span class="roxo">melhores blocos</span> <br> de carnaval de 2024`,
+      title: `Encontre os <span class="roxo">melhores blocos</span> <br> de carnaval em 2024`,
       subTitle: "Find your block",
     };
   },
