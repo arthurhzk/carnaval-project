@@ -2,9 +2,10 @@
   <div class="search-content">
     <div class="search-field">
       <input
+        v-model="selectedInput"
         class="input-content"
         type="text"
-        placeholder="Pesquise por nome"
+        placeholder="Pesquise por bloco"
       />
       <select class="select-content" v-model="selectedCity">
         <option
@@ -29,6 +30,7 @@ export default {
       title: `Encontre os <span class="roxo">melhores blocos</span> <br> de carnaval de 2024`,
       subTitle: "Find your block",
       selectedCity: "",
+      selectedInput: "",
       cities: [
         { label: "Selecione uma cidade", value: "" },
         { label: "Roca Sales - RS", value: "roca sales" },
@@ -44,9 +46,12 @@ export default {
   methods: {
     searchCityOnGoogle() {
       if (this.selectedCity === "") {
-        alert("Selecione uma opção!");
-      } else if (this.selectedCity) {
-        const searchQuery = this.selectedCity + " bloco de carnaval 2024";
+        alert("Selecione uma cidade!");
+      } else if (this.selectedInput === "") {
+        alert("Digite um nome para pesquisar!");
+      } else {
+        const searchQuery =
+          this.selectedCity + " " + this.selectedInput + " carnaval 2024";
         const googleUrl = `https://www.google.com/search?q=${searchQuery}`;
         open(googleUrl);
       }
