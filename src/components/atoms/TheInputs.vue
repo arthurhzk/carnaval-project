@@ -47,7 +47,7 @@ export default {
       } else if (this.selectedCity) {
         const searchQuery = this.selectedCity + " bloco de carnaval 2024";
         const googleUrl = `https://www.google.com/search?q=${searchQuery}`;
-        window.open(googleUrl, "_blank");
+        open(googleUrl);
       }
     },
   },
