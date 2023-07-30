@@ -45,9 +45,7 @@ export default {
       if (this.selectedCity === "") {
         alert("Selecione uma opção!");
       } else if (this.selectedCity) {
-        const searchQuery = encodeURIComponent(
-          this.selectedCity + " bloco de carnaval 2024"
-        );
+        const searchQuery = this.selectedCity + " bloco de carnaval 2024";
         const googleUrl = `https://www.google.com/search?q=${searchQuery}`;
         window.open(googleUrl, "_blank");
       }
