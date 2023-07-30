@@ -1,22 +1,26 @@
 <template>
-    <button id="purple-button" class="purple-button" :class="{white: variant === 'white', big: big}">
-        <slot></slot>
-    </button>
+  <button
+    id="purple-button"
+    class="purple-button"
+    :class="{ white: variant === 'white', big: big }"
+  >
+    <slot></slot>
+  </button>
 </template>
 
 <script>
 export default {
-    name: "TheButton",
-    props: {
-        variant: {
-            type: String,
-            default: "purple",
-        },
-        big: {
-            type: Boolean,
-            default: false,
-        }
-    }
+  name: "TheButton",
+  props: {
+    variant: {
+      type: String,
+      default: "purple",
+    },
+    big: {
+      type: Boolean,
+      default: false,
+    },
+  },
 };
 </script>
 
@@ -45,13 +49,23 @@ export default {
     padding: 1.2rem 3.2rem;
     font-size: 1.6rem;
   }
-
-//   @extend .container-center;
 }
 
 .container-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  padding: 0.4rem 2.4rem;
+  cursor: pointer;
+  border: none;
+  gap: 8px;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  text-transform: uppercase;
 }
 </style>

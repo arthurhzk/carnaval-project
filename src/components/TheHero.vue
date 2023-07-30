@@ -1,55 +1,27 @@
 <template>
   <header>
     <div class="content">
-      <div class="title">
-        <p class="subtitle">{{ subTitle }}</p>
-        <h1 class="main-title" v-html="title"></h1>
-      </div>
-      <div class="search-content">
-        <div class="search-field">
-          <input
-            class="input-content"
-            type="text"
-            placeholder="Pesquise por nome"
-          />
-          <select class="select-content" v-model="selectedCity">
-            <option
-              v-for="(city, index) in cities"
-              :key="index"
-              :value="city.value"
-            >
-              {{ city.label }}
-            </option>
-          </select>
-          <TheButton big>{{ purpleButton }}</TheButton>
-        </div>
-      </div>
+      <the-titles></the-titles>
+      <the-inputs></the-inputs>
     </div>
   </header>
 </template>
 
 <script>
-import TheButton from './atoms/TheButton.vue';
-
+import TheInputs from "../components/atoms/TheInputs.vue";
+import TheTitles from "./TheTitles.vue";
 export default {
-    name: "TheHero",
-    data() {
-        return {
-            title: `Encontre os <span class="roxo">melhores blocos</span> <br> de carnaval de 2023`,
-            subTitle: "Find your block",
-            selectedCity: "",
-            cities: [
-                { label: "Selecione uma cidade", value: "" },
-                { label: "Roca Sales - RS", value: "option1" },
-                { label: "Encantado - RS", value: "option2" },
-                { label: "Arvorezinha - RS", value: "option3" },
-                { label: "Guaporé - RS", value: "option4" },
-                { label: "Lajeado - RS", value: "option5" },
-            ],
-            purpleButton: "Buscar agora",
-        };
-    },
-    components: { TheButton }
+  name: "TheHero",
+  components: {
+    TheInputs,
+    TheTitles,
+  },
+  data() {
+    return {
+      title: `Encontre os <span class="roxo">melhores blocos</span> <br> de carnaval de 2023`,
+      subTitle: "Find your block",
+    };
+  },
 };
 </script>
 <style scoped lang="scss">
@@ -100,37 +72,5 @@ header::after {
   font-weight: 700;
   line-height: 125%;
   color: $black;
-}
-.search-content {
-  padding: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-  background-color: $white;
-  max-width: 99.3rem;
-  max-height: 12.8rem;
-  margin: auto;
-}
-.search-field {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.2rem;
-  gap: 2.4rem;
-  min-width: 25.4rem;
-  min-height: 1.6rem;
-  border-radius: 0.5rem;
-}
-.input-content,
-.select-content {
-  background: $bg-gray;
-  color: $gray1;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  border: none;
-  padding: 1.2rem;
 }
 </style>

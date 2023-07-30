@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import TheButton from "./atoms/TheButton.vue";
 import TheCards from "../components/TheCards.vue";
+import TheButton from "../components/atoms/TheButton.vue";
 export default {
   name: "TheSection",
   data() {
@@ -44,27 +44,15 @@ section {
   display: flex;
   gap: 0.8rem;
 }
-button {
-  padding: 0.4rem 2.4rem;
-  cursor: pointer;
-  border: none;
-  gap: 8px;
-  border-radius: 0.5rem;
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 2.4rem;
-  text-transform: uppercase;
-}
 
 .loading {
-  height: 15.3rem;
-  background-color: grey;
-  border-radius: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  height: 15.3rem;
+  background-color: $gray1;
+  border-radius: 0.8rem;
+  color: $white;
   font-weight: bold;
 }
 </style>

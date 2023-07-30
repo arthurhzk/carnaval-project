@@ -42,17 +42,24 @@ export default {
 }
 
 .card-block {
-  margin-top: 41.5px;
-  gap: 32px;
-  width: 384px;
-  height: 323px;
-  padding: 16px;
-  border-radius: 10px;
-  border: 1px solid #eaeaea;
+  margin-top: 4.15rem;
+  gap: 3.2rem;
+  width: 38.4rem;
+  height: 32.3rem;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  border: 0.1rem solid #eaeaea;
   background: #fff;
 }
 img {
-  width: 350px;
-  height: 153px;
+  width: 35rem;
+  height: 15.3rem;
+  cursor: pointer;
+  will-change: filter;
+  transition: filter 300ms, transform 300ms;
+  &:hover {
+    filter: brightness(0.8);
+    transform: translateY(-5px);
+  }
 }
 </style>
