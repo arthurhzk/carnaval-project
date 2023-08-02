@@ -30,9 +30,6 @@ export default {
   text-align: center;
   position: relative;
   background-color: $bg-gray;
-  z-index: -2;
-}
-.content {
   z-index: 1;
 }
 .main-container::before {
@@ -41,7 +38,7 @@ export default {
   width: 40.7rem;
   height: 34.5rem;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 0;
   left: 0;
 }
@@ -54,7 +51,6 @@ export default {
   right: 0;
   bottom: -1rem;
   overflow: hidden;
-  z-index: 0;
 }
 .title {
   gap: 1.9rem;
