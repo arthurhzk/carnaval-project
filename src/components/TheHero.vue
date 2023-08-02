@@ -27,10 +27,12 @@ export default {
 <style scoped lang="scss">
 header {
   min-height: 53.2rem;
-  min-width: 144rem;
   text-align: center;
   position: relative;
   background-color: $bg-gray;
+  z-index: -2;
+}
+.content {
   z-index: 1;
 }
 header::before {
@@ -39,7 +41,7 @@ header::before {
   width: 40.7rem;
   height: 34.5rem;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   top: 0;
   left: 0;
 }
@@ -52,6 +54,7 @@ header::after {
   right: 0;
   bottom: -1rem;
   overflow: hidden;
+  z-index: 0;
 }
 .title {
   gap: 1.9rem;
@@ -72,5 +75,12 @@ header::after {
   font-weight: 700;
   line-height: 125%;
   color: $black;
+}
+
+@media (max-width: 700px) {
+  header::before,
+  header::after {
+    display: none;
+  }
 }
 </style>

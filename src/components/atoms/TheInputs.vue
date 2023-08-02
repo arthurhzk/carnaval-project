@@ -1,6 +1,6 @@
 <template>
-  <div class="search-content">
-    <div class="search-field">
+  <div>
+    <div class="search-content">
       <input
         v-model="selectedInput"
         class="input-content"
@@ -67,8 +67,7 @@ export default {
   justify-content: center;
   gap: 3.2rem;
   background-color: $white;
-  max-width: 99.3rem;
-  max-height: 12.8rem;
+
   margin: auto;
   margin-top: 4rem;
 }
@@ -78,8 +77,9 @@ export default {
   align-items: center;
   padding: 1.2rem;
   gap: 2.4rem;
-  min-width: 25.4rem;
+  max-width: 25.4rem;
   min-height: 1.6rem;
+  width: 50%;
   border-radius: 0.5rem;
 }
 .input-content,
@@ -92,5 +92,10 @@ export default {
   line-height: 100%;
   border: none;
   padding: 1.2rem;
+}
+@media (max-width: 700px) {
+  .search-content {
+    flex-direction: column;
+  }
 }
 </style>
