@@ -89,4 +89,15 @@ img {
   color: $white;
   font-weight: bold;
 }
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-block {
+    width: 100%;
+  }
+}
 </style>

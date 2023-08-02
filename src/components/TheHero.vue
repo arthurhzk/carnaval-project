@@ -1,10 +1,10 @@
 <template>
-  <header>
+  <div class="main-container">
     <div class="content">
       <the-titles></the-titles>
       <the-inputs></the-inputs>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-header {
+.main-container {
   min-height: 53.2rem;
   text-align: center;
   position: relative;
@@ -35,7 +35,7 @@ header {
 .content {
   z-index: 1;
 }
-header::before {
+.main-container::before {
   content: "";
   background-image: url(../assets/bg-header-top.svg);
   width: 40.7rem;
@@ -45,7 +45,7 @@ header::before {
   top: 0;
   left: 0;
 }
-header::after {
+.main-container::after {
   content: "";
   background-image: url(../assets/bg-header-bottom.svg);
   width: 41.4rem;
@@ -78,8 +78,8 @@ header::after {
 }
 
 @media (max-width: 700px) {
-  header::before,
-  header::after {
+  .main-container::before,
+  .main-container::after {
     display: none;
   }
 }

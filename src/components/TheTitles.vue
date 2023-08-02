@@ -1,7 +1,7 @@
 <template>
   <div class="title">
     <p class="subtitle">{{ subTitle }}</p>
-    <h1 class="main-title" v-html="title"></h1>
+    <span class="main-title" v-html="title"></span>
   </div>
 </template>
 
@@ -39,5 +39,10 @@ export default {
 }
 .roxo {
   color: $purple;
+}
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+  }
 }
 </style>
