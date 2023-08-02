@@ -44,4 +44,26 @@ section {
   display: flex;
   gap: 0.8rem;
 }
+
+@media (max-width: 768px) {
+  section {
+    margin: 10rem 2.4rem 10rem;
+  }
+  .main-hero {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .button-container {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+@media (max-width: 375px) {
+  section {
+    margin: 10rem 2rem 10rem;
+  }
+  img {
+    width: 100%;
+  }
+}
 </style>

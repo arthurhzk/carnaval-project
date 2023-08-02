@@ -89,7 +89,7 @@ img {
   color: $white;
   font-weight: bold;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
     display: grid;
@@ -98,6 +98,31 @@ img {
   }
   .card-block {
     width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .grid-container {
+    .card-block {
+      height: 100%;
+      width: 100%;
+
+      grid-template-columns: repeat(1, 1fr);
+    }
+    img {
+      width: 99%;
+      height: 100%;
+    }
+    h3 {
+      font-size: 70%;
+    }
+    p {
+      font-size: 70%;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>

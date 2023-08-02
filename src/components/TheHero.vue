@@ -73,7 +73,7 @@ export default {
   color: $black;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .main-container::before,
   .main-container::after {
     display: none;

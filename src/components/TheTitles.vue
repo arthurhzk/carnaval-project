@@ -45,4 +45,11 @@ export default {
     font-size: 3rem;
   }
 }
+@media (max-width: 450px) {
+  .main-title {
+    font-size: 2rem;
+    margin-left: 0px;
+    text-align: center;
+  }
+}
 </style>
