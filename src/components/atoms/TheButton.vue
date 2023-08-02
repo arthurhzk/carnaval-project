@@ -1,5 +1,6 @@
 <template>
   <button
+    :disabled="disabled"
     id="purple-button"
     class="purple-button"
     :class="{ white: variant === 'white', big: big }"
@@ -17,6 +18,10 @@ export default {
       default: "purple",
     },
     big: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
       type: Boolean,
       default: false,
     },
@@ -43,6 +48,11 @@ export default {
   &.white {
     background-color: $white;
     color: $purple;
+  }
+  &:disabled {
+    background-color: $gray1;
+    color: $white;
+    cursor: not-allowed;
   }
 
   &.big {

@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .title {
   gap: 1.9rem;
   align-items: center;
@@ -36,5 +36,8 @@ export default {
   font-weight: 700;
   line-height: 125%;
   color: $black;
+}
+.roxo {
+  color: $purple;
 }
 </style>

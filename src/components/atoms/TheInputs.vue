@@ -16,7 +16,11 @@
           {{ city.label }}
         </option>
       </select>
-      <TheButton @click="searchCityOnGoogle">{{ purpleButton }}</TheButton>
+      <TheButton
+        :disabled="selectedInput.length == 0 || selectedCity.length == 0"
+        @click="searchCityOnGoogle"
+        >{{ purpleButton }}</TheButton
+      >
     </div>
   </div>
 </template>
@@ -45,16 +49,10 @@ export default {
 
   methods: {
     searchCityOnGoogle() {
-      if (this.selectedCity === "") {
-        alert("Selecione uma cidade!");
-      } else if (this.selectedInput === "") {
-        alert("Digite um nome para pesquisar!");
-      } else {
-        const searchQuery =
-          this.selectedCity + " " + this.selectedInput + " carnaval 2024";
-        const googleUrl = `https://www.google.com/search?q=${searchQuery}`;
-        open(googleUrl);
-      }
+      const searchQuery =
+        this.selectedCity + " " + this.selectedInput + " carnaval 2024";
+      const googleUrl = `https://www.google.com/search?q=${searchQuery}`;
+      open(googleUrl);
     },
   },
   components: { TheButton },
